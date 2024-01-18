@@ -1,0 +1,83 @@
+{% extends 'start/base/base.html' %} {% load static %}
+{%block style%}
+<link rel="stylesheet" href="{% static 'start/static/start/styles/home.css' %}">
+<link rel="stylesheet" href="{% static 'start/static/start/styles/table.css' %}">{%endblock%}
+{%block title%}Home{%endblock%} {%block body%}
+
+<div id="header">
+    <div class="row">
+        <div class="col-md-4">
+            <div id="logo">
+                    <h4>Covid-19 Prediction</h4>
+                
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+<p>Our ML Model is generating a prediction, Please wait...</p>
+
+
+    <div class="divTable blueTable">
+        <div class="divTableHeading">
+        <div class="divTableRow">
+        <div class="divTableHead">Index</div>
+        <div class="divTableHead">Value</div>
+        </div>
+        </div>
+        <div class="divTableBody">
+        <div class="divTableRow">
+        <div class="divTableCell"><p>Your BPM:</p></div>
+        <div class="divTableCell"><p>{{bpm}}</p></div>
+        </div>
+        <div class="divTableRow">
+        <div class="divTableCell"><p>Your SpO2: </p></div>
+        <div class="divTableCell"><p>{{spo2}}</p></div>
+        </div>
+        <div class="divTableRow">
+        <div class="divTableCell"><p>Your Body Temperature: </p></div>
+        <div class="divTableCell"><p>{{temp}}</p></div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell"><p>Your cough status: </p></div>
+            <div class="divTableCell"><p>{{cough}}</p></div>
+            </div>
+        </div>
+        </div>
+
+
+<div class="container">
+    <br><br><br>
+    <div id="box">
+{% if covid_res == 1 %}
+    <p>Your Covid-19 prediction status: <b>Covid-19 positive(+) suspect</b> </p>  
+{% else %}
+<p>Your Covid-19 prediction status: <b>Covid-19 negative(-) suspect</b> </p>
+{% endif %}
+
+    </div>        
+</div> 
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" onclick="location.href='{% url 'record' %}'" id="flow"> <h5> record cough</h5> </button>
+</form>
+<br>
+<br>
+<br>
+<br>
+
+{%endblock%}

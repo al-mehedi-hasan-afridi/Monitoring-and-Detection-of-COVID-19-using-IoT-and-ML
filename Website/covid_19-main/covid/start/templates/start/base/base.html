@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static '/start/static/start/styles/footer.css' %}">
+    <link rel="stylesheet" href="start/static/start/styles/home.css">
+    <style>
+        div.blueTable {
+            background-color: #EEEEEE;
+            width: 95%;
+            text-align: center;
+        }
+        
+        .divTable.blueTable .divTableCell,
+        .divTable.blueTable .divTableHead {
+            border: 2px solid #8790AA;
+            padding: 2px 2px;
+        }
+        
+        .divTable.blueTable .divTableBody .divTableCell {
+            font-size: 17px;
+            color: #666666;
+        }
+        
+        .divTable.blueTable .divTableHeading {
+            background: #1C6EA4;
+            background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+            border-bottom: 2px solid #444444;
+        }
+        
+        .divTable.blueTable .divTableHeading .divTableHead {
+            font-size: 18px;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+        
+        .divTable.blueTable .divTableHeading .divTableHead:first-child {
+            border-left: none;
+        }
+        
+        .blueTable .tableFootStyle {
+            font-size: 14px;
+        }
+        
+        .blueTable .tableFootStyle .links {
+            text-align: right;
+        }
+        
+        .blueTable .tableFootStyle .links a {
+            display: inline-block;
+            background: #1C6EA4;
+            color: #FFFFFF;
+            padding: 2px 8px;
+            border-radius: 3px;
+        }
+        
+        .blueTable.outerTableFooter {
+            border-top: none;
+        }
+        
+        .blueTable.outerTableFooter .tableFootStyle {
+            padding: 2px 2px;
+        }
+        /* DivTable.com */
+        
+        .divTable {
+            display: table;
+        }
+        
+        .divTableRow {
+            display: table-row;
+        }
+        
+        .divTableHeading {
+            display: table-header-group;
+        }
+        
+        .divTableCell,
+        .divTableHead {
+            display: table-cell;
+        }
+        
+        .divTableHeading {
+            display: table-header-group;
+        }
+        
+        .divTableFoot {
+            display: table-footer-group;
+        }
+        
+        .divTableBody {
+            display: table-row-group;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+        
+        #box {
+            margin: auto;
+            width: 60%;
+            border: 3px solid #4e4f4d;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        #header {
+            background: hsl(0, 17%, 95%);
+        }
+        
+        a:link {
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+        #flow{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid green;
+        }
+    </style>
+    {%block style%}{%endblock%}
+    <title>{%block title%}{%endblock%}</title>
+</head>
+
+<body>
+    <div class="container">
+        {%block body%} {%endblock%}
+    </div>
+    <div class="container">
+        <div>
+            <table border="1">
+                <div class="footer">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Developers</h5>
+                            <ul id="foot" class="float">
+                                <li>
+                                    <p> <b>Md Maruf Chowdhury</b></br> -CSE, North South University</br>
+                                        maruf.chowdury@gmail.com</p>
+
+                                </li>
+                                <li>
+                                    <p> <b>Al Mehedi Hasan</b></br> -CSE, North South University</br>
+                                        aalmehedihasan@gmail.com</p>
+
+                                </li>
+                                <li>
+                                    <p> <b>Istiak Ahmed Sheam</b></br> -CSE, North South University</br>
+                                        istiakseyam@gmail.com</p>
+
+                                </li>
+                            </ul>
+                            <p>≈This website is going through development. Consider us if there are any mistakes.™</p>
+                        </div>
+                        <div class="col-md-6">
+
+                        </div>
+                    </div>
+                    </br>
+                </div>
+        </div>
+
+        </table>
+
+
+    </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+a:hover {
+    text-decoration: none;
+}
+
+#box {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #4e4f4d;
+    padding: 10px;
+    text-align: right;
+}
+
+#header {
+    color: goldenrod;
+    background: hsl(0, 17%, 95%);
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}

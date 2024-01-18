@@ -1,0 +1,9 @@
+#foot li {
+    display: inline-block;
+}
+
+.footer {
+    background: rgba(196, 192, 192, 0.625);
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
